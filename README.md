@@ -1,2 +1,2 @@
-# CoffeeWarCoinV5
-CoffeeWarCoinV5 with ICO; testing and deploy
+# CoffeeWarCoin
+ERC20 Token CoffeeWarCoinV5 Deploy Environment
