@@ -29,4 +29,4 @@ jobs:
         brownie test --coverage
     - name: Run Deploy to local ganache
       run: |
-        brownie run scripts/deploy_token.py
+        brownie run scripts/deploy_token_and_ICO.py

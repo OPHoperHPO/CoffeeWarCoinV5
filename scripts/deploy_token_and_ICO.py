@@ -1,5 +1,4 @@
-from brownie import CoffeeCoin, accounts
-
+from brownie import CoffeeCoin, accounts, CoffeeICO, web3
 
 def main():
     # data = json.load(open("vars.json"))
@@ -14,3 +13,5 @@ def main():
 
     acct = accounts[0]  # Deploy to local Ganache
     tx = acct.deploy(CoffeeCoin, gas_limit=3999999, gas_price=0)
+    ico = acct.deploy(CoffeeICO, tx, 3, web3.toWei("3", "ether"), web3.toWei("5", "ether"))
+    tx.setICOContractAddress(ico, {"from": acct})
